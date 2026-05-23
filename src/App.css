@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 40px;
+  background: #0f0f1a;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #a855f7, #ec4899, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.fancy-btn {
+  padding: 16px 48px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5), 0 0 60px rgba(236, 72, 153, 0.2);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fancy-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ec4899, #f97316);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fancy-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.fancy-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.8), 0 0 80px rgba(236, 72, 153, 0.4);
+}
+
+.fancy-btn:active {
+  transform: scale(0.97);
+}
+
+.fancy-btn.active {
+  background: linear-gradient(135deg, #f97316, #ec4899);
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.7), 0 0 80px rgba(236, 72, 153, 0.4);
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 30px rgba(249, 115, 22, 0.7), 0 0 80px rgba(236, 72, 153, 0.4); }
+  50% { box-shadow: 0 0 50px rgba(249, 115, 22, 1), 0 0 120px rgba(236, 72, 153, 0.7); }
+}

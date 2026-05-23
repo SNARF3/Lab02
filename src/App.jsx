@@ -6,7 +6,7 @@ export default function App() {
 
   return (
     <div className="container">
-      <h1 className="title">labo 02 cloud wa Marvin Mollo</h1>
+      <h1 className="title">labo 02 cloud wa Marvin Mollo Ramirez</h1>
       <button
         className={`fancy-btn ${clicked ? 'active' : ''}`}
         onClick={() => setClicked(c => !c)}
